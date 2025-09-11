@@ -1,6 +1,6 @@
 ﻿using System;
 
-    // Clase abstracta
+    // Class abstracta
     public abstract class GeometricFigure
     {
         // Propiedad

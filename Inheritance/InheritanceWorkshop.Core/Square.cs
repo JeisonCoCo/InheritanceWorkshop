@@ -1,29 +1,35 @@
-﻿using Geometry;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace InheritanceWorkshop.Core
 {
     public class Square : GeometricFigure
     {
-        private double _a;
+        private double area;
 
-        public Square(string name, double a) : base(name)
+        public Square(string name, double area) => A = area;
+      
+        public double A
         {
-            A = a;
+            get => area;
+            set => area = ValidateA(value);
         }
 
-        public string A
-        {
-            get => A; set => A = ValidateA();
-        }
+        public override double GetArea() => A * A;
 
-        private int ValidateA(double value)
+        public override double GetPerimeter() => 4 * A;
+
+        private int ValidateA(double area)
         {
-            if (value < 0)
+            if (area < 0)
             {
-                throw new Exception($"The minute {A} is not valid");
+                throw new Exception($"The area {area} is not valid");
             }
-            return value;
+
+            return (int)area;
         }
 
     }
