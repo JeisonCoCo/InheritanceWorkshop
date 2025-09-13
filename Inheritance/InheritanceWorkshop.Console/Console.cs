@@ -1,6 +1,5 @@
 ﻿
 using InheritanceWorkshop.Core;
-using System;
 
 var circle = new Circle(nameof(Circle), 5);
 var square = new Square(nameof(Square), 10);

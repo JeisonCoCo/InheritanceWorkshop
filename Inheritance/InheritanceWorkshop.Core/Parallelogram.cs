@@ -24,7 +24,6 @@ namespace InheritanceWorkshop.Core
             H = h;
         }
 
-
         private double ValidateH(double _h)
         {
             if (_h < 0)

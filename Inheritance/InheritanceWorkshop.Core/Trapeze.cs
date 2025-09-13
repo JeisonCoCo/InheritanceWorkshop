@@ -16,18 +16,23 @@ namespace InheritanceWorkshop.Core
             get => _d; set => _d = ValidateD(value);
         }
 
-        public override double GetArea() => ((B + D) * H) / 2;
+        public override double GetArea() => (B + D) * H / 2;
 
         public override double GetPerimeter() => A + B + C + D;
 
         public Trapeze(string name, double a, double b, double c, double d, double h) : base(name, a, b, c, h)
         {
-            D = d; 
+            D = d;
+            
+            B = 60;  
+            D = 100; 
+            H = 100;
+
         }
 
         private double ValidateD(double _d)
         {
-            if (_d < 0)
+            if (_d <= 0)
             {
                 throw new Exception($"The side {_d} is not valid");
             }
