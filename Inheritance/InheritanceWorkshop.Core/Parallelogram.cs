@@ -17,13 +17,17 @@ namespace InheritanceWorkshop.Core
 
         public override double GetArea() => B * H;
 
-        public  double GetPerimeter() => 2 * (A + B);
+        public override double GetPerimeter() => 2 * (A + B);
 
-        public Parallelogram() => Parallelogram = _h;
+        public Parallelogram(string name, double a, double b, double h) : base(name, a, b)
+        {
+            H = h;
+        }
+
 
         private double ValidateH(double _h)
         {
-            if (_h > 0)
+            if (_h < 0)
             {
                 throw new Exception($"The height {_h} is not valid");
             }

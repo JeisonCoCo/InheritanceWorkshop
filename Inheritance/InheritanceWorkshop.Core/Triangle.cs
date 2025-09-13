@@ -20,11 +20,15 @@ namespace InheritanceWorkshop.Core
             get => _h; set => _h = ValidateH(value);
         }
 
-        public override double GetArea() => (B * H) * 2;
+        public override double GetArea() => (B * H) / 2;
 
         public override double GetPerimeter() => A + B + C;
 
-        public Triangle(double triangle) => Triangle = _c;
+        public Triangle(string name, double a, double b, double c, double h) : base(name, a, b)
+        {
+            C = c;
+            H = h;
+        }
 
         private double ValidateC(double _c)
         {

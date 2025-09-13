@@ -9,8 +9,12 @@ namespace InheritanceWorkshop.Core
     public class Circle : GeometricFigure
     {
         private double _r;
-        public Circle(double r) => R = r;
-        
+
+        public Circle(string name, double r) : base(name)
+        {
+            R = r;
+        }
+
         public double R
         {
             get => _r; set => _r = ValidateR(value);

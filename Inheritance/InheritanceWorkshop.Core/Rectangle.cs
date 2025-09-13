@@ -16,7 +16,12 @@ namespace InheritanceWorkshop.Core
         }
         public override double GetArea() => A * B;
         public override double GetPerimeter() => 2 * (A + B);
-        public Rectangle(double rectangle) => Rectangle = rectangle;
+
+        public Rectangle(string name, double a, double b) : base(name, a)
+        {
+            B = b;
+        }
+
         private double ValidateB(double _b)
         {
             if (_b < 0)

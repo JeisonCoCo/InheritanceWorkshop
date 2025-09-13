@@ -23,8 +23,12 @@ namespace InheritanceWorkshop.Core
 
         public override double GetPerimeter() => 4 * A;
 
-        public Rhombus(double Rhombus) => Rhombus = _d1;
-    
+        public Rhombus(string name, double a, double _d1, double _d2) : base(name, a)
+        {
+            D1 = _d1;
+            D2 = _d2;
+        }
+
         private double ValidateD1(double _d1)
         {
             if (_d1 < 0)
