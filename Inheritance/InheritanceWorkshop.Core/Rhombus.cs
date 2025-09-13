@@ -10,17 +10,21 @@ namespace InheritanceWorkshop.Core
     {
         private double _d1, _d2;
 
-        public double D1 { get; set; }
-        public double D2 { get; set; }
+        public double D1
+        {
+            get => _d1; set => _d1 = ValidateD1(value);
+        }
+        public double D2 
+        { 
+            get => _d2; set => _d2 = ValidateD2(value); 
+        }
 
         public override double GetArea() => (D1 * D2)/2;
 
         public override double GetPerimeter() => 4 * A;
 
-        public Rhombus(double Rhombus)
-        {
-            Rhombus = rhombus;
-        }
+        public Rhombus(double Rhombus) => Rhombus = _d1;
+    
         private double ValidateD1(double _d1)
         {
             if (_d1 < 0)

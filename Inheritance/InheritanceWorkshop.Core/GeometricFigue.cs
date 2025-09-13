@@ -1,20 +1,13 @@
 ﻿using System;
 
-    // Class abstracta
+    
     public abstract class GeometricFigure
     {
-        // Propiedad
-        public string Name
-        { 
-            get => Name; 
-            set => Name = value;
-        }
+        public string Name { get; set; }
 
-        // Métodos abstractos
-        public abstract double GetArea();
+    public abstract double GetArea();
         public abstract double GetPerimeter();
 
-        // Método ToString sobrescrito
         public override string ToString()
         {
             return $"{Name} => Area.....: {GetArea():N5}\tPerimeter: {GetPerimeter():N5}";

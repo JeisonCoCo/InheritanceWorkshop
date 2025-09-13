@@ -8,25 +8,22 @@ namespace InheritanceWorkshop.Core
 {
     public class Circle : GeometricFigure
     {
-        private double r;
-        public Circle(double r)
-        {
-            R = r;
-        }
+        private double _r;
+        public Circle(double r) => R = r;
+        
         public double R
         {
-            get => r;
-            set => r = ValidateR(value);
+            get => _r; set => _r = ValidateR(value);
         }
-        public double GetArea() => Math.PI * R * R;
-        public double GetPerimeter() => 2 * Math.PI * R;
-        private double ValidateR(double radius)
+        public override double GetArea() => Math.PI * R * R;
+        public override double GetPerimeter() => 2 * Math.PI * R;
+        private double ValidateR(double _r)
         {
-            if (radius < 0)
+            if (_r < 0)
             {
-                throw new Exception($"The radius {radius} is not valid");
+                throw new Exception($"The radius {_r} is not valid");
             }
-            return radius;
+            return _r;
         }
     }
 }

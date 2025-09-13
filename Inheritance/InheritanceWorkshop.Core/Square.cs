@@ -8,28 +8,30 @@ namespace InheritanceWorkshop.Core
 {
     public class Square : GeometricFigure
     {
-        private double area;
+        private double _a;
 
-        public Square(string name, double area) => A = area;
-      
+        public Square(string name, double _a)
+        {
+            Name = name; 
+            A = _a;
+        }
+
         public double A
         {
-            get => area;
-            set => area = ValidateA(value);
+            get => _a; set => _a = ValidateA(value);
         }
 
         public override double GetArea() => A * A;
 
         public override double GetPerimeter() => 4 * A;
 
-        private int ValidateA(double area)
+        private int ValidateA(double _a)
         {
-            if (area < 0)
+            if (_a < 0)
             {
-                throw new Exception($"The area {area} is not valid");
+                throw new Exception($"The area {_a} is not valid");
             }
-
-            return (int)area;
+            return _a;
         }
 
     }
