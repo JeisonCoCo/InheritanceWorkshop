@@ -10,9 +10,10 @@ namespace InheritanceWorkshop.Core
     {
         private double _r;
 
-        public Circle(string name, double r) : base(name)
+
+        public Circle(string name, double _r)
         {
-            R = r;
+            R = _r;
         }
 
         public double R

@@ -16,7 +16,7 @@ namespace InheritanceWorkshop.Core
             get => _d; set => _d = ValidateD(value);
         }
 
-        public override double GetArea() => (B + D) * (H / 2);
+        public override double GetArea() => ((B + D) * H) / 2;
 
         public override double GetPerimeter() => A + B + C + D;
 

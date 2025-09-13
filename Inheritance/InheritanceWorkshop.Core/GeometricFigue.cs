@@ -10,9 +10,8 @@
 
         public override string ToString()
         {
-            return $"{Name} => Area.....: {GetArea():N5}\tPerimeter: {GetPerimeter():N5}";
-       
-    }
-    }
+            return string.Format("{0,-15} => Area.....: {1,12:N5}     Perimeter: {2,12:N5}",Name, GetArea(), GetPerimeter());
+        }
+}
 
 

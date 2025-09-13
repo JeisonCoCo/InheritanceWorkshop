@@ -25,7 +25,7 @@ namespace InheritanceWorkshop.Core
 
         public override double GetPerimeter() => 4 * A;
 
-        private int ValidateA(double _a)
+        private double ValidateA(double _a)
         {
             if (_a < 0)
             {
